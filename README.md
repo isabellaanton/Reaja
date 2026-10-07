@@ -1,6 +1,6 @@
 # Reaja
 
-Portal educativo bilíngue e estático para consulta de recomendações de autoproteção. Usa HTML, CSS e JavaScript nativos e carrega Archivo Black pelo Google Fonts e Chillax, Clash Grotesk e Tanker pela API oficial do Fontshare.
+Portal educativo bilíngue e estático para consulta de recomendações de autoproteção. Usa HTML, CSS e JavaScript nativos e carrega Archivo Black pelo Google Fonts e Chillax, Clash Grotesk e Tanker pela API oficial do Fontshare. O lettering e o símbolo enviados pela usuária são usados no cabeçalho e nos ícones do PWA.
 
 ## O que o site oferece
 

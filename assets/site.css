@@ -3,22 +3,25 @@
 
 :root {
   color-scheme: light;
-  --bg: #fffaf2;
-  --surface: #fffdf9;
+  --bg: #fff8ed;
+  --surface: #fffdf8;
   --ink: #2d1b19;
   --muted: #594743;
   --line: #e7d8ca;
   --brand: #a9232d;
-  --brand-contrast: #fffaf2;
+  --brand-contrast: #ffffff;
   --red: #a9232d;
   --orange: #bd4b10;
   --yellow: #795900;
   --yellow-fill: #f2bf3d;
+  --icon-bg: #ffedb8;
+  --notice-bg: #ffeadb;
+  --callout-bg: #fff0bd;
   --focus: #bd4b10;
-  --shadow: 0 8px 28px #55241912;
+  --shadow: none;
   --radius: 18px;
-  --font-body: 'Chillax', system-ui, sans-serif;
-  --font-heading: 'Archivo Black', 'Clash Grotesk', sans-serif;
+  --font-body: 'Clash Grotesk', system-ui, sans-serif;
+  --font-heading: 'Clash Grotesk', system-ui, sans-serif;
   --font-ui: 'Clash Grotesk', system-ui, sans-serif;
   --font-display: 'Tanker', 'Clash Grotesk', sans-serif;
   --cat-hydric: var(--orange);
@@ -42,6 +45,9 @@ html[data-theme='dark'] {
   --red: #ff7773;
   --orange: #ff9a61;
   --yellow: #ffdc70;
+  --icon-bg: #56351b;
+  --notice-bg: #512f24;
+  --callout-bg: #503b19;
   --focus: #ffbd78;
   --shadow: 0 8px 28px #0004;
 }
@@ -52,7 +58,8 @@ a { color: var(--brand); text-underline-offset: 3px; }
 button, input, select { font: inherit; }
 button, a, select { min-height: 44px; }
 button { cursor: pointer; }
-h1, h2 { font-family: var(--font-heading); font-weight: 400; }
+h1, h2 { font-family: var(--font-heading); font-weight: 600; }
+h1 { font-family: 'Archivo Black', var(--font-heading), sans-serif; font-weight: 400; }
 h3, .nav, .control, .btn { font-family: var(--font-ui); }
 .skip { position: absolute; left: -9999px; top: 0; z-index: 99; padding: 1rem; background: var(--surface); }
 .skip:focus { left: 1rem; }
@@ -61,20 +68,23 @@ h3, .nav, .control, .btn { font-family: var(--font-ui); }
 .headrow { display: flex; align-items: center; gap: 16px; min-height: 76px; }
 .logo { margin-right: auto; color: var(--ink); font: 2rem var(--font-display); letter-spacing: .015em; text-decoration: none; }
 .logo b { color: var(--brand); font-weight: 400; }
+.logo img { display: block; width: 168px; height: auto; }
 .nav { display: flex; align-items: center; gap: 12px; }
 .nav a { color: var(--ink); font-weight: 650; text-decoration: none; }
 .controls { display: flex; gap: 8px; }
 .control { min-height: 44px; padding: 8px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
-.hero { max-width: 800px; padding: 64px 0 38px; }
+.hero { display: flex; max-width: 100%; align-items: center; justify-content: space-between; gap: 36px; padding: 64px 0 38px; }
+.hero-copy { max-width: 800px; }
+.hero-symbol { display: block; width: min(26vw, 300px); height: auto; flex: none; object-fit: contain; }
 .eyebrow { color: var(--orange); font: 1rem var(--font-display); letter-spacing: .08em; text-transform: uppercase; }
 .hero h1 { max-width: 760px; margin: 14px 0; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.02; letter-spacing: -.055em; }
-.hero p { margin: 0; color: var(--muted); font-size: 1.2rem; }
+.hero p { margin: 0; color: var(--muted); font: 1.2rem/1.55 'Chillax', var(--font-body), sans-serif; }
 .searchrow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 10px 0 20px; }
 .search { flex: 1; min-width: 250px; min-height: 52px; padding: 12px 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .card { position: relative; display: block; min-height: 174px; padding: 20px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); text-decoration: none; transition: transform .16s ease, border-color .16s ease; }
 .card:hover { transform: translateY(-2px); border-color: var(--orange); }
-.iconbox { display: grid; width: 48px; height: 48px; margin-bottom: 14px; place-items: center; color: var(--accent); background: color-mix(in srgb, var(--yellow-fill) 24%, var(--surface)); border-radius: 14px; }
+.iconbox { display: grid; width: 48px; height: 48px; margin-bottom: 14px; place-items: center; color: var(--accent); background: var(--icon-bg); border-radius: 14px; }
 .icon { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .card h3 { margin: 0 0 5px; font-size: 1.08rem; line-height: 1.25; }
 .card p { margin: 0; color: var(--muted); font-size: .88rem; }
@@ -105,10 +115,10 @@ h3, .nav, .control, .btn { font-family: var(--font-ui); }
 .phase ul { margin: 0; padding-left: 1.25rem; }
 .phase li { padding-bottom: 10px; }
 .general { margin-top: 18px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
-.callout { margin: 20px 0; padding: 18px; color: var(--ink); background: color-mix(in srgb, var(--yellow-fill) 20%, var(--surface)); border: 1px solid var(--yellow); border-left: 5px solid var(--orange); border-radius: 12px; }
+.callout { margin: 20px 0; padding: 18px; color: var(--ink); background: var(--callout-bg); border: 1px solid var(--yellow); border-left: 5px solid var(--orange); border-radius: 12px; }
 .callout h2 { margin: 0 0 5px; font: 1.2rem var(--font-ui); }
 .callout p { margin: 0; }
-.notice { margin: 18px 0; padding: 15px; color: var(--ink); background: color-mix(in srgb, var(--orange) 10%, var(--surface)); border-left: 4px solid var(--orange); border-radius: 12px; }
+.notice { margin: 18px 0; padding: 15px; color: var(--ink); background: var(--notice-bg); border-left: 4px solid var(--orange); border-radius: 12px; }
 .about { max-width: 850px; padding: 34px 0 80px; }
 .footer { margin-top: 36px; padding: 28px 0 110px; color: var(--muted); border-top: 1px solid var(--line); font-size: .88rem; }
 .footer p { margin: 6px 0; }
@@ -122,6 +132,7 @@ h3, .nav, .control, .btn { font-family: var(--font-ui); }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .phasegrid { grid-template-columns: 1fr; }
   .hero { padding-top: 44px; }
+  .hero-symbol { width: 150px; }
   .shell { padding-right: 18px; padding-left: 18px; }
   .emrow { gap: 6px 14px; }
   .emrow strong { width: 100%; }
@@ -130,6 +141,8 @@ h3, .nav, .control, .btn { font-family: var(--font-ui); }
   .grid, .prepgrid { grid-template-columns: 1fr; }
   .card { min-height: 0; }
   .hero h1 { font-size: 2.65rem; }
+  .hero { display: block; }
+  .hero-symbol { width: 112px; margin: 20px 0 0 auto; }
   .detailhead h1 { font-size: 2rem; }
   .emergency { font-size: .88rem; }
   .emrow a { padding: 4px 2px; }
