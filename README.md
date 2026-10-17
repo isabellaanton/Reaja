@@ -1,56 +1,134 @@
-# Reaja
+<div align="center">
 
-Portal educativo bilíngue e estático para consulta de recomendações de autoproteção. Usa HTML, CSS e JavaScript nativos e carrega Archivo Black pelo Google Fonts e Chillax, Clash Grotesk e Tanker pela API oficial do Fontshare. O lettering e o símbolo enviados pela usuária são usados no cabeçalho e nos ícones do PWA.
+<img src="assets/reaja-wordmark.png" alt="Reaja!" width="260">
+
+### Quando acontece um desastre, saber onde procurar já é metade da resposta.
+
+Portal educativo e bilíngue que leva você, em poucos toques, à orientação **oficial** da Defesa Civil para cada tipo de desastre.
+
+**[reajaa.vercel.app](https://reajaa.vercel.app/)** &nbsp;·&nbsp; Português &nbsp;·&nbsp; English
+
+<br>
+
+</div>
+
+---
+
+## Por que o Reaja existe
+
+Em uma emergência, a pessoa não tem tempo nem calma para procurar em sites de governo, abrir PDFs soltos e adivinhar qual deles serve para a situação em que está. As orientações oficiais de autoproteção **existem**, são feitas por quem entende do assunto e estão publicadas pela Secretaria Nacional de Proteção e Defesa Civil (Sedec/MIDR), mas ficam espalhadas em vários arquivos, difíceis de achar no celular na hora do susto.
+
+O Reaja nasceu para **encurtar esse caminho**:
+
+> **identificar o que está acontecendo → abrir a orientação oficial correta**, sem rodeios.
+
+Ele não tenta substituir a Defesa Civil nem reescrever as recomendações. Ele é uma **porta de entrada**: organiza os 13 temas, explica de forma visual do que cada um se trata e leva direto para a fonte oficial.
 
 ## O que o site oferece
 
-O Reaja ajuda a pessoa a encontrar rapidamente a fonte oficial para cada um dos 13 temas cobertos pelo portal. A interface foi pensada para leitura rápida, inclusive no celular, com busca, filtros por categoria, páginas individuais e links diretos aos PDFs da Sedec/MIDR.
+| | |
+|---|---|
+| **Busca e filtros** | Encontre o desastre pelo nome ou filtre por categoria: hídricos, geológicos, meteorológicos, climáticos e saúde, tecnológicos. |
+| **Ilustrações próprias** | Cada tema tem uma ilustração em SVG, nítida em qualquer tela, para reconhecer a situação num relance. |
+| **Contatos sempre à vista** | Barra fixa com Defesa Civil **199**, Bombeiros **193**, SAMU **192**, Polícia Militar **190** e o **SMS 40199** para alertas, tudo com toque para ligar. |
+| **Link direto ao PDF oficial** | Cada página aponta para o material da Sedec/MIDR no gov.br. |
+| **Funciona offline** | Depois da primeira visita, as páginas e as ilustrações ficam guardadas para consulta sem internet (os PDFs do gov.br continuam exigindo conexão). |
+| **Tema claro e escuro** | Respeita a preferência do aparelho e pode ser trocado no cabeçalho. |
+| **Português e inglês** | Interface completa nos dois idiomas. |
+| **Imprimir e compartilhar** | Salve a página em PDF, imprima ou envie o link por WhatsApp e pelo compartilhamento do celular. |
+| **Sem rastreamento** | Sem cookies de rastreamento e sem analytics. |
 
-- Mantém contatos de emergência do Brasil sempre à mão, com links para ligar pelo celular, e informa o SMS 40199 para alertas.
-- Permite escolher português ou inglês e alternar entre tema claro e escuro.
-- Pode guardar as páginas do site para consulta offline depois da primeira visita com internet; os PDFs oficiais continuam hospedados no gov.br e podem exigir conexão.
-- Oferece impressão ou salvamento da página em PDF e compartilhamento do link.
-- Não usa cookies de rastreamento nem analytics e não carrega imagens pesadas ou bibliotecas de interface. As fontes tipográficas são carregadas de Google Fonts e Fontshare quando há conexão; sem rede ou se esses serviços estiverem indisponíveis, o navegador usa fontes alternativas do sistema.
 
-O principal benefício é reduzir o caminho entre identificar um tema e abrir a orientação oficial correspondente. O site não substitui alertas, instruções ou atendimento da Defesa Civil local.
+## Os 13 temas
+
+<table>
+<tr>
+<td align="center"><img src="assets/illustrations/alagamentos.svg" width="210" alt=""><br><sub><b>Alagamentos</b></sub></td>
+<td align="center"><img src="assets/illustrations/enxurradas.svg" width="210" alt=""><br><sub><b>Enxurradas</b></sub></td>
+<td align="center"><img src="assets/illustrations/inundacoes.svg" width="210" alt=""><br><sub><b>Inundações</b></sub></td>
+<td align="center"><img src="assets/illustrations/chuvas-intensas.svg" width="210" alt=""><br><sub><b>Chuvas intensas</b></sub></td>
+</tr>
+<tr>
+<td align="center"><img src="assets/illustrations/deslizamentos.svg" width="210" alt=""><br><sub><b>Deslizamentos</b></sub></td>
+<td align="center"><img src="assets/illustrations/barragens.svg" width="210" alt=""><br><sub><b>Rompimento de barragens</b></sub></td>
+<td align="center"><img src="assets/illustrations/granizo.svg" width="210" alt=""><br><sub><b>Granizo</b></sub></td>
+<td align="center"><img src="assets/illustrations/tornados.svg" width="210" alt=""><br><sub><b>Tornados</b></sub></td>
+</tr>
+<tr>
+<td align="center"><img src="assets/illustrations/vendavais.svg" width="210" alt=""><br><sub><b>Vendavais</b></sub></td>
+<td align="center"><img src="assets/illustrations/incendios-florestais.svg" width="210" alt=""><br><sub><b>Incêndios florestais</b></sub></td>
+<td align="center"><img src="assets/illustrations/ondas-de-calor.svg" width="210" alt=""><br><sub><b>Ondas de calor</b></sub></td>
+<td align="center"><img src="assets/illustrations/baixa-umidade.svg" width="210" alt=""><br><sub><b>Baixa umidade do ar</b></sub></td>
+</tr>
+<tr>
+<td align="center"><img src="assets/illustrations/doencas-infecciosas-virais.svg" width="210" alt=""><br><sub><b>Doenças infecciosas virais</b></sub></td>
+<td></td><td></td><td></td>
+</tr>
+</table>
+
+## Princípios do projeto
+
+- **Fonte oficial em primeiro lugar.** O site identifica a fonte e leva ao material da Sedec/MIDR; não reproduz nem resume as recomendações.
+- **Leitura rápida, mesmo sob estresse.** Poucos elementos, texto grande, contraste forte e contatos de emergência sempre visíveis.
+- **Pensado para o celular.** É nele que a maioria das pessoas vai consultar na hora do aperto.
+- **Leve e acessível.** HTML, CSS e JavaScript nativos, sem bibliotecas de interface; link para pular ao conteúdo, rótulos para leitores de tela e respeito a `prefers-reduced-motion`.
+- **Privacidade.** Nada de rastreadores.
+
+> **Aviso importante:** o Reaja é um portal educativo e **não substitui** alertas, instruções ou atendimento da Defesa Civil local. Em emergência, ligue **199** (Defesa Civil), **193** (Bombeiros), **192** (SAMU) ou **190** (Polícia Militar) e siga as orientações das autoridades da sua região.
+
+## Tecnologia e design
+
+Site estático, sem etapa de build: HTML, CSS e JavaScript nativos, com PWA (manifest + service worker).
+
+- **Tipografia:** Archivo Black nos títulos principais, Clash Grotesk em títulos menores e controles, Chillax no texto corrido e Tanker em marcas e rótulos. Carregadas do Google Fonts e do Fontshare; sem rede, o navegador usa fontes do sistema.
+- **Paleta:** vermelho, laranja e amarelo com neutros quentes, ajustada para os temas claro e escuro.
+- **Ilustrações:** SVGs em estilo plano, todas em proporção 4:3 e com a mesma paleta (`assets/illustrations/`).
+- **Cache offline:** o service worker busca primeiro na rede e usa o cache só quando não há conexão, para o site não ficar preso em versões antigas.
+
+### Estrutura
+
+```
+Reaja/
+├── pt/ · en/                rotas de cada idioma (uma página por tema)
+├── data/
+│   ├── disasters.js         catálogo dos 13 temas
+│   └── i18n.js              textos da interface
+├── assets/
+│   ├── app.js · site.css    comportamento e estilos
+│   ├── illustrations/       ilustrações SVG dos 13 temas
+│   └── icons, logo, PWA     ícones, lettering e símbolo
+├── docs/                    imagens usadas neste README
+├── sw.js · manifest.webmanifest
+└── sitemap.xml · robots.txt
+```
 
 ## Executar localmente
 
-Sirva a pasta `reaja` por um servidor HTTP local (service workers não funcionam em `file://`). Por exemplo, com Python instalado, execute `python -m http.server 8000` dentro da pasta e abra `http://localhost:8000/pt/`.
+O service worker não funciona em `file://`, então sirva a pasta por HTTP. Com Python instalado, dentro da pasta do projeto:
+
+```bash
+python -m http.server 8000
+```
+
+Abra `http://localhost:8000/pt/`.
 
 ## Publicar
 
-Publique o conteúdo desta pasta em Vercel, Netlify ou Cloudflare Pages como site estático. Configure `/pt` como entrada padrão se a plataforma exigir um diretório raiz. Os arquivos `robots.txt` e `sitemap.xml` incluem `https://reaja.example`, que deve ser substituído pelo domínio real antes da publicação. HTTPS é necessário para o service worker em produção.
+Publique a pasta como site estático em Vercel, Netlify ou Cloudflare Pages, com `/pt` como entrada padrão se a plataforma exigir. Antes de publicar, troque `https://reaja.example` pelo domínio real em `robots.txt` e `sitemap.xml`. É necessário HTTPS para o service worker em produção.
+
+## Contribuir com um novo tema ou idioma
+
+- **Novo desastre:** acrescente os campos PT/EN em `data/disasters.js`, atribua um slug e o link do PDF oficial, mantenha o ícone no grid 24×24 com traço de 1.8 e adicione `assets/illustrations/<slug>.svg` (viewBox `0 0 400 300`). Inclua também o slug em `sw.js` e crie as páginas em `pt/<slug>/` e `en/<slug>/`.
+- **Novo idioma:** crie o diretório da rota e as traduções da interface em `data/i18n.js`. **Não traduza o conteúdo da Sedec sem autorização.**
 
 ## Conteúdo e licença
 
-As páginas identificam a fonte e levam aos PDFs oficiais da Secretaria Nacional de Proteção e Defesa Civil (Sedec/MIDR); não reproduzem nem resumem as recomendações. Os PDFs indicados pelo MIDR são licenciados sob CC BY-ND 3.0. A licença permite compartilhamento com atribuição, mas não derivações. **Solicite autorização formal ao MIDR antes de adaptar, resumir, reformatar editorialmente ou traduzir as recomendações oficiais.** Por esse motivo, a interface inglesa apresenta marcadores `[VERIFY]` e direciona ao material original, sem publicar tradução de instruções de segurança.
+As páginas identificam a fonte e levam aos PDFs oficiais da Secretaria Nacional de Proteção e Defesa Civil (Sedec/MIDR). Esses PDFs são licenciados sob **CC BY-ND 3.0**: permitem compartilhamento com atribuição, mas **não derivações**.
 
-## Design system
+**Solicite autorização formal ao MIDR antes de adaptar, resumir, reformatar editorialmente ou traduzir as recomendações oficiais.** Por isso, a interface em inglês exibe marcadores `[VERIFY]` e direciona ao material original, sem publicar tradução de instruções de segurança.
 
-A identidade visual usa Archivo Black nos títulos principais, Clash Grotesk em títulos menores e controles, Chillax no texto corrido e Tanker em marcas e rótulos. A paleta combina vermelho, laranja e amarelo com tons neutros quentes. Os mesmos tokens são ajustados para temas claro e escuro.
+---
 
-## Estrutura
-
-- `pt/`, `en/`: rotas de idioma e metadados hreflang.
-- `data/`: catálogo dos 13 temas e traduções da interface.
-- `assets/`: estilos, scripts e ícones SVG.
-- `sw.js`, `manifest.webmanifest`: suporte instalável e consulta offline após a primeira visita online.
-
-Para adicionar um desastre, acrescente os campos PT/EN ao catálogo em `data/disasters.js`, atribua um slug e link oficial, e mantenha o ícone no mesmo grid 24×24 com traço de 1.8. Para adicionar outro idioma, crie seu diretório de rota e traduções de interface em `data/i18n.js`; não traduza conteúdo Sedec sem autorização.
-
-## QA
-
-- [x] 13 páginas temáticas vinculadas por slug, com nome PT/EN, categoria, cor, ícone SVG próprio e link ao PDF oficial.
-- [x] Interface PT-BR/EN, seletor persistente, detecção inicial do navegador e hreflang.
-- [x] Tema claro/escuro com preferência do sistema, persistência e prevenção de flash.
-- [x] Busca local nos nomes, filtros por categoria, contatos `tel:`, SMS 40199.
-- [x] Botões de impressão e compartilhamento, links para PDFs oficiais, avisos editoriais.
-- [x] Manifesto e service worker para cache de páginas e recursos do site após primeira conexão; PDFs externos não são armazenados.
-- [x] Skip link, landmarks semânticos, foco visível, movimento reduzido, alvos de toque amplos.
-- [x] Estilo de impressão e sem cookies/analytics.
-- [ ] Executar QA visual em dispositivos e leitores de tela, auditoria axe e medição Lighthouse em hospedagem HTTPS.
-- [ ] Confirmar autorização MIDR antes de publicar qualquer conteúdo traduzido/adaptado e substituir domínio de exemplo.
-
-Não foi possível afirmar conformidade WCAG 2.2 AA, pontuação Lighthouse ≥95 ou validação com leitor de tela sem auditoria em navegador e ferramentas dedicadas. O desempenho real do offline depende de o usuário ter aberto as páginas enquanto online.
-
+<div align="center">
+<sub>Feito com cuidado, para que ninguém precise procurar quando mais precisa saber.</sub>
+</div>
